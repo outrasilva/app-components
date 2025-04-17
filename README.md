@@ -1,11 +1,41 @@
-# Sample Snack app
+# 💸 App de Controle de Saldo
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
+Este é um projeto simples desenvolvido em **React Native** utilizando **Expo Go**, com foco no aprendizado de componentes, estado e contexto. A aplicação permite **adicionar e subtrair valores** de um saldo exibido na tela.
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo cli](https://docs.expo.dev/get-started/installation/#expo-cli)).
+## 📱 Tecnologias Utilizadas
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- Context API (React)
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.dev/c/expo-dev-tools/61) or [Discord](https://chat.expo.dev/).
+## 🎯 Funcionalidades
 
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
+- Exibir o saldo atual
+- Inserir valores via campo de texto
+- Botões para adicionar ou subtrair do saldo
+- Gerenciamento de estado com `useContext` e `useState`
+
+## 🧠 O que foi aprendido
+
+- Criação e uso de **componentes funcionais**
+- Gerenciamento de estado com **useState**
+- Compartilhamento de estado global com **Context API**
+- Estilização com **StyleSheet** do React Native
+
+## 📂 Estrutura do Projeto
+
+### 🔹 App.js
+
+Arquivo principal que importa os componentes e fornece o contexto via `SaldoProvider`.
+
+### 🔹 componentes/Saldo.js
+
+Componente responsável por **exibir o saldo atual** do usuário.
+
+### 🔹 componentes/Lancamento.js
+
+Componente com um `TextInput` para digitar um valor e um botão que **adiciona ou subtrai** do saldo, dependendo da `props.Credito`.
+
+### 🔹 context/ContaContext.js
+
+Implementação do **Context API** que fornece o estado `saldo` para todos os componentes filhos.
